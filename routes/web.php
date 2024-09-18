@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/tab', function () {
     return view('tab');
 });
@@ -82,4 +81,7 @@ Route::get('/resources/sass/{filename}', function ($filename) {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return view('home');
+});
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
